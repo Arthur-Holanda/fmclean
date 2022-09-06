@@ -47,13 +47,24 @@ end
 theorem disj_comm :
   (P ∨ Q) → (Q ∨ P)  :=
 begin
-  sorry,
+  intro hp,
+  cases hp,
+  right,
+  assumption,
+  left,
+  assumption,
 end
 
 theorem conj_comm :
   (P ∧ Q) → (Q ∧ P)  :=
 begin
-  sorry,
+  intro hp,
+  split,
+  cases hp,
+  assumption,
+  cases hp,
+  assumption,
+  
 end
 
 
@@ -64,7 +75,10 @@ end
 theorem impl_as_disj_converse :
   (¬P ∨ Q) → (P → Q)  :=
 begin
-  sorry,
+  intro hp,
+  intro g,
+  cases hp,
+
 end
 
 theorem disj_as_impl :
